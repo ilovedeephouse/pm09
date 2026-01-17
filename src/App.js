@@ -105,9 +105,26 @@ function App() {
         )}
 
 
+
+        {view === 'sale' && (
+          <div className="about-page">
+            <h1>акции сегодня</h1>
+
+            <div className="about-content">
+              <section>
+                <a href=''><h2>«Новинки со скидкой»</h2></a>
+                <p></p>
+                <a href=''><h2>«Последние размеры»</h2></a>
+              </section>
+            </div>
+          </div>
+        )}
+
+
+
         {view === 'catalog' && (
           <div className="catalog-page">
-            <h1>в продаже</h1>
+            <h1>новинки со скидкой</h1>
             <div className="grid">
               {products.map(p => (
                 <div key={p.id} className="card">
@@ -137,6 +154,11 @@ function App() {
             </div>
           </div>
         )}
+
+
+
+
+
 
         {view === 'cart' && (
           <div className="cart-page">
